@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall of Games</title>
+    <style>
+        :root {
+            --bg-color: #0d0e15;
+            --card-bg: #161925;
+            --text-color: #f0f3f8;
+            --accent-color: #ff007f;
+            --accent-hover: #ff4da6;
+            --neon-blue: #00f0ff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            padding: 0 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0 0 0.5rem 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #8a8f98;
+            margin: 0;
+        }
+
+        h2 span {
+            color: var(--neon-blue);
+            font-weight: 600;
+        }
+
+        .game-container {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            border: 1px solid #23283d;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--neon-blue);
+            box-shadow: 0 15px 35px rgba(0, 240, 255, 0.15);
+        }
+
+        .game-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .game-card:nth-child(1) .game-title { color: #ffbc42; }
+        .game-card:nth-child(2) .game-title { color: #ff3f00; }
+        .game-card:nth-child(3) .game-title { color: var(--neon-blue); }
+
+        .play-btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 15px rgba(255, 0, 127, 0.3);
+        }
+
+        .play-btn:hover {
+            background-color: var(--accent-hover);
+            transform: scale(1.05);
+        }
+
+        .play-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hall of Games</h1>
+        <h2>Games are by <span>Paul Broens</span></h2>
+    </header>
+
+    <main class="game-container">
+        <div class="game-card">
+            <div class="game-title">Tether</div>
+            <a href="https://tether-three-iota.vercel.app/" class="play-btn">Play Tether</a>
+        </div>
+
+        <div class="game-card">
+            <div class="game-title">CarCity</div>
+            <a href="https://carcity-one.vercel.app/" class="play-btn">Play CarCity</a>
+        </div>
+
+        <div class="game-card">
+            <div class="game-title">NEON DRIVE</div>
+            <a href="https://neondrive-kappa.vercel.app/" class="play-btn">Play NEON DRIVE</a>
+        </div>
+    </main>
+
+</body>
+</html>
